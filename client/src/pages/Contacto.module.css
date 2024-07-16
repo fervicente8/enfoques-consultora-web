@@ -1,0 +1,190 @@
+.contactContainer {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 80px 50px;
+}
+
+.contactContainer h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.formContainer {
+  width: 55%;
+}
+
+.containerNameLast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerNameLast div {
+  width: 45%;
+}
+
+.inputLabelDiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.inputLabelDiv label {
+  font-size: 1.1rem;
+}
+
+.inputLabelDiv input,
+textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid var(--third-color);
+  outline: none;
+  background-color: whitesmoke;
+}
+
+.formContainer .errorText {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.formContainer .submitButton {
+  cursor: pointer;
+  width: 100px;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.formContainer .submitButton:hover {
+  filter: brightness(0.8);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.formContainer .submitButton .spinner {
+  display: block;
+}
+
+.formContainer .submitButton::before {
+  content: "";
+  background-color: var(--third-color);
+}
+
+.formContainer .submitButton .loading-text {
+  display: none;
+}
+
+.submitButtonDisabled {
+  width: 100px;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: var(--third-color);
+  cursor: not-allowed;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.rightContainer .titleContainer {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.rightContainer .titleContainer h2 {
+  font-size: 2.2rem;
+  color: var(--third-color);
+  padding-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 0.5px solid var(--third-color);
+  margin-bottom: 25px;
+}
+
+.rightContainer .dataContainer h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rightContainer .dataContainer h4:nth-child(3) {
+  margin-top: 10px;
+}
+
+.rightContainer .dataContainer a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: underline;
+  color: black;
+}
+
+.rightContainer .dataContainer p {
+  margin-bottom: 10px;
+}
+
+.rightContainer .dataContainer p:nth-child(4):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .rightContainer {
+    width: 100%;
+    border: 2px solid var(--secondary-color);
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .rightContainer .titleContainer {
+    margin: auto;
+  }
+
+  .rightContainer div.dataContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .contactContainer {
+    padding: 80px 20px;
+  }
+}

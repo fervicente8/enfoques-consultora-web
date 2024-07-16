@@ -1,0 +1,106 @@
+.whatWeDoContainer {
+  padding: 100px 80px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  background-color: whitesmoke;
+}
+
+.whatWeDoContainer p {
+  margin: 0 0 5px;
+  font-size: 19px;
+}
+
+.whatWeDoContainer .rightContainer {
+  width: 50%;
+}
+
+.whatWeDoContainer .rightContainer .img {
+  background-image: url("../images/image4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.whatWeDoContainer .leftContainer {
+  width: 50%;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.whatWeDoContainer .leftContainer .titleContainer {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.whatWeDoContainer .leftContainer .titleContainer h2 {
+  font-size: 2.2rem;
+  color: var(--third-color);
+  padding-bottom: 15px;
+}
+
+.whatWeDoContainer .leftContainer .titleContainer h2:nth-child(1) {
+  font-weight: 700;
+  border-bottom: 0.5px solid var(--third-color);
+}
+
+.whatWeDoContainer .leftContainer .titleContainer h2:nth-child(2) {
+  font-weight: 400;
+}
+
+.containerTitleAndDesc {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--third-color);
+}
+
+.containerTitleWithButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 10px;
+}
+
+.containerTitleWithButton p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+p.description {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  padding: 0 15px;
+}
+
+@media (max-width: 1024px) {
+  .whatWeDoContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .whatWeDoContainer .leftContainer {
+    padding: 0;
+    width: 100%;
+  }
+
+  .whatWeDoContainer .leftContainer .titleContainer {
+    margin: auto;
+  }
+
+  .whatWeDoContainer .rightContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .whatWeDoContainer {
+    padding: 80px 20px;
+  }
+}

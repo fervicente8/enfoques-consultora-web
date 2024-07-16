@@ -1,0 +1,135 @@
+.containerNavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
+  font-family: "Roboto", sans-serif;
+}
+
+.containerHmbMenu {
+  display: none;
+}
+
+ul.listContainer {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+ul.listContainer li {
+  cursor: pointer;
+}
+
+ul.listContainer li a {
+  color: #212529;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+ul.listContainer li a.nonActive:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+ul.listContainer li a.isActive {
+  border-bottom: 3px solid var(--third-color);
+}
+
+div.containerSocialLinks {
+  display: flex;
+  gap: 14px;
+}
+
+div.containerSocialLinks a {
+  color: #212529;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .containerNavBar {
+    padding: 40px 30px;
+  }
+
+  ul.listContainer {
+    gap: 25px;
+  }
+
+  .containerNavBar .containerSocialLinks {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerNavBar {
+    padding: 20px 30px;
+  }
+
+  .containerHmbMenu {
+    display: block;
+  }
+
+  .containerNavBar .listContainer {
+    display: none;
+  }
+
+  .containerNavBar img {
+    width: 200px;
+  }
+
+  .containerNavBar .containerHmbContent {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    position: absolute;
+    gap: 7px;
+    padding: 14px 0;
+    left: 0;
+    bottom: -167.5px;
+    border-top: 0.5px solid var(--secondary-color);
+  }
+
+  .containerNavBar .containerHmbContent a {
+    color: rgb(12, 11, 11);
+    font-weight: 500;
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+
+  .containerNavBar .containerHmbContent a.isActive {
+    color: var(--third-color);
+  }
+
+  .containerHmbSocial {
+    display: flex;
+    margin-top: 8px;
+    gap: 5px;
+    font-size: 25px;
+  }
+
+  .containerNavBar .containerSocialLinks a{
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .containerNavBar {
+    padding: 10px 30px;
+  }
+
+  .containerNavBar img {
+    width: 180px;
+  }
+}

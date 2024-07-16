@@ -1,0 +1,114 @@
+.whoWeAreContainer {
+  padding: 100px 80px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.whoWeAreContainer p{
+    margin: 0 0 5px ;
+    font-size: 19px;
+}
+
+.whoWeAreContainer .leftContainer {
+  width: 50%;
+}
+
+.whoWeAreContainer .leftContainer .img {
+  background-image: url("../images/image4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.whoWeAreContainer .rightContainer {
+  width: 50%;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.whoWeAreContainer .rightContainer .titleContainer {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.whoWeAreContainer .rightContainer .titleContainer h2 {
+  font-size: 2.2rem;
+  color: var(--third-color);
+  padding-bottom: 15px;
+}
+
+.whoWeAreContainer .rightContainer .titleContainer h2:nth-child(1) {
+  font-weight: 700;
+  border-bottom: 0.5px solid var(--third-color);
+}
+
+.whoWeAreContainer .rightContainer .titleContainer h2:nth-child(2) {
+  font-weight: 400;
+}
+
+.directoraDataContainer {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.directoraDataContainer p{
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 14px;
+}
+
+@media (max-width: 1024px) {
+  .whoWeAreContainer {
+    flex-direction: column;
+    padding: 100px 80px;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .whoWeAreContainer .leftContainer {
+    width: 100%;
+  }
+
+  .whoWeAreContainer .leftContainer .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .whoWeAreContainer .rightContainer {
+    padding: 0;
+    width: 100%;
+  }
+
+  .whoWeAreContainer .rightContainer .titleContainer {
+    margin: auto;
+  }
+
+  .whoWeAreContainer .directoraDataContainer {
+    position: static;
+    text-align: end;
+  }
+}
+
+@media (max-width: 768px) {
+  .whoWeAreContainer .leftContainer .img {
+    min-height: 100px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 580px) {
+  .whoWeAreContainer {
+    padding: 80px 20px;
+  }
+}

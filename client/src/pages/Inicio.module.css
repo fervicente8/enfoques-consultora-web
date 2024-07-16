@@ -1,0 +1,197 @@
+.principalActivityContainer {
+  position: relative;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.principalActivityContainer div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/image6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.principalActivityContainer h1 {
+  max-width: 1100px;
+  padding: 100px;
+  line-height: 65px;
+  text-align: center;
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+.seParteDeNuestroEquipo {
+  background-color: var(--third-color);
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.seParteDeNuestroEquipo h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.seParteDeNuestroEquipo button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: black;
+  color: var(--secondary-color);
+}
+
+.seParteDeNuestroEquipo button:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.formContainer p {
+  margin: 0;
+}
+
+.formContainer .formTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formContainer .formTop .formInput {
+  max-width: 50%;
+}
+
+.formInput {
+  padding: 10px 5px;
+}
+
+.formInput input {
+  border-radius: 4px;
+  padding: 5px;
+  outline: none;
+  border: 1px solid var(--third-color);
+  width: 100%;
+}
+
+.formInput .error {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.buttonSend {
+  width: 90px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--third-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonSend:hover {
+  background-color: rgba(0, 153, 153, 0.9);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.buttonSend.loading .spinner {
+  display: block;
+}
+
+.buttonSend.loading {
+  pointer-events: none;
+}
+
+.buttonSend.loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--third-color);
+}
+
+.buttonSend.loading .loading-text {
+  display: none;
+}
+
+.buttonSendDisabled {
+  width: 90px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--third-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .principalActivityContainer h1 {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 580px) {
+  .formContainer {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formContainer .formTop {
+    flex-direction: column;
+  }
+
+  .formContainer .formTop .formInput {
+    max-width: 100%;
+  }
+
+  .formInput input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .principalActivityContainer h1 {
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
